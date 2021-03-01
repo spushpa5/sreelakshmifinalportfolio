@@ -10,7 +10,7 @@ let User = require('../models/user');
 
 module.exports.contactListDisplay =  async function(req, res, next) {
     try{
-        const Users = await User.find().sort({name:-1}).exec();
+        const Users = await User.find().sort({name:1}).exec();
         
 
     
