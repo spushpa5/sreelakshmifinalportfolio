@@ -1,0 +1,113 @@
+<%-include ../partials/header.ejs%>
+<%-include ../partials/main_nav.ejs%>
+
+<section class="businessContact">
+    <div class="limiter">
+        <h1><%= title %></h1>
+		<div class="container-table100">
+            
+			<div class="wrap-table100">
+				<div class="table100 ver1 m-b-110">
+					<div class="table100-head">
+						
+						
+						<table>
+							<thead id="btblhead">
+								<% if(typeof displayName == 'string' && displayName) { %>
+									<tr class="row100 head">
+										<th class="cell100 column1">Name</th>
+										<th class="cell100 column2">Contact</th>
+										<th class="cell100 column3">Email</th>
+										<th class="cell100 column1"></th>
+										<th class="cell100 column1"></th>
+										
+									</tr>
+									<% } else { %>
+										<tr class="row100 head">
+											<th class="cell100 column1">Name</th>
+											<th class="cell100 column2">Contact</th>
+											<th class="cell100 column3">Email</th>
+											
+											
+										</tr>
+								  <% } %>
+								
+							</thead>
+						</table>
+					</div>
+
+					<div class="table100-body js-pscroll">
+						<table>
+							<tbody>
+                                <!--Repeatable template row-->
+                                <% for(let count=0;count < Users.length; count++){ %>
+                                   
+                                    <tr class="row100 body">
+										<% if(typeof displayName == 'string' && displayName) { %>
+                                        <td class="cell100 column1"><%=Users[count].name %></td>
+                                        <td class="cell100 column2"><%=Users[count].phone %></td>
+                                        <td class="cell100 column3"><%=Users[count].email %></td>
+										
+											<td><a href="/buisiness-contact/edit/<%=Users[count]._id %>" class="btn btn-outline-primary"><i class="fas fa-pencil-alt"></i>  Edit</a></td>
+										<!-- <td><a href="/buisiness-contact/delete/<%=Users[count]._id %>" class="btn btn-outline-danger delete" ><i class="fas fa-trash-alt"></i>  Delete</a></td> -->
+										<td><a href="#" class="btn btn-outline-danger delete" onclick="deleteUser('<%=Users[count]._id %>');" data-id="<%=Users[count]._id %>" ><i class="fas fa-trash-alt" ></i>  Delete</a></td>
+										
+										<% } else { %>
+										
+												<td class="cell100 column1"><%=Users[count].name %></td>
+												<td class="cell100 column2"><%=Users[count].phone %></td>
+												<td class="cell100 column3"><%=Users[count].email %></td>
+										  <% } %>
+										
+										
+                                    </tr>
+
+                                <%  } %>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+				
+
+				
+
+				
+			</div>
+		</div>
+
+		<% if(typeof displayName == 'string' && displayName) { %>
+			<div class="text-center bbtnDiv">
+				<a href="/buisiness-contact/add" class="btn btn-primary bbtn" id="bAdd"><i class="fas fa-user-plus"></i>  Add</a>  
+				<button type="button" class="btn btn-primary bbtn" id="bSave"><i class="fas fa-save"></i>  Save  </button>
+			</div>
+		<% } %>
+		<br>
+        
+        
+
+	</div>
+
+    <nav aria-label="Page navigation example" class="pgnBuisiness">
+        <ul class="pagination justify-content-end">
+            <a class="page-link" href="/services" tabindex="-1" aria-disabled="true">Previous</a>
+            <%-include ../partials/pagination.ejs%>
+            <a class="page-link" href="/contact">Next</a>
+          </li>
+        </ul>
+      </nav>
+
+	
+
+
+
+</section>
+
+
+	
+	
+
+    <%-include ../partials/footer.ejs%>
+    <%-include ../partials/footer_nav.ejs%>
+ 

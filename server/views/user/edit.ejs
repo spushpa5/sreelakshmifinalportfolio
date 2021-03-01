@@ -1,0 +1,71 @@
+<link rel='stylesheet' href='../../Content/stylesheets/app.css' />
+<%-include ../partials/header.ejs%>
+<%-include ../partials/main_nav.ejs%>
+
+ <!--Main Content-->
+   <!-- ======= Add User Section ======= -->
+   <section id="AddUser" class="AddUser d-flex flex-column align-items-center justify-content-center">
+    <h1><%= title %></h1>
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-3 col-md-6">
+    
+           
+           
+            <form action="/buisiness-contact/edit/<%= User._id %>"method="POST" class="form">
+                <div class="form-group">
+                    <labe for="nameTextField">Name</labe>
+                    <input type="text" class="form-control" 
+                    id="nameTextField" 
+                    placeholder="name" 
+                    name="name"
+                    value="<%= User.name %>"
+                     required>
+                </div>
+    
+                <div class="form-group">
+                    <labe for="emailTextField">Email</labe>
+                    <input type="text" class="form-control" 
+                    id="emailTextField" 
+                    placeholder="email" 
+                    name="email" 
+                    value="<%= User.email %>"
+                    required>
+                </div>
+    
+                <div class="form-group">
+                    <labe for="contactTextField">Contact</labe>
+                    <input type="text" class="form-control" 
+                    id="contactTextField" 
+                    placeholder="contact" 
+                    name="phone"
+                    value="<%= User.phone %>"
+                     required>
+                </div>
+
+                <button class="btn btn-primary" type="submit" id="addSubmit">
+                    <i class="fas fa-edit"></i> Submit
+                </button>
+    
+                
+            </form>
+
+           
+            
+             <!-- <a href="/buisiness-contact" class="btn btn-primary" id="addSubmit"><i class="fas fa-undo"></i>Submit</a> -->
+            <!-- <a href="/buisiness-contact" class="btn btn-warning" id="addCancel"><i class="fas fa-undo"></i>Cancel</a> -->
+
+
+        </div>
+        </div>
+
+      
+
+    </div>
+  </section><!-- End Services Section -->
+
+
+
+
+<%-include ../partials/footer.ejs%>
+<%-include ../partials/footer_nav.ejs%>

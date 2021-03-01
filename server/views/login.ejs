@@ -1,0 +1,33 @@
+<%-include partials/header.ejs%>
+<%-include partials/main_nav.ejs%>
+   <!--Main Section-->
+   <main class='container'>
+    <div class="rows">
+        <div class="col-md-offset-3 col-md-6">
+            <h1><%=title%></h1>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+            <!--header Rows-->
+            <tr>
+                <th class="text-center">User Name</th>
+                <th class="text-center">Password</th>
+                <th class="text-center">email</th>
+            </tr>
+            <!--Repeatable template row-->
+            <% for(let count=0;count < loginList.length; count++){ %>
+                <tr>
+                    <th class="text-center"><%=loginList[count].username %></th>
+                    <th class="text-center"><%=loginList[count].password %></th>
+                    <th class="text-center"><%=loginList[count].email %></th>
+                </tr>
+
+           <%  } %>
+            </table>
+
+        </div>
+
+    </div>
+   </main>
+   
+<%-include partials/footer_nav.ejs%>
+<%-include partials/footer.ejs%>

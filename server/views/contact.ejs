@@ -1,0 +1,100 @@
+
+
+  <%-include partials/header.ejs%>
+  <%-include partials/main_nav.ejs%>
+   <!--Main Content-->
+  <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg" > 
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Get in touch</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-4">
+            <div class="contact-about">
+              <h3>Sreelakshmi</h3>
+              <p>If you have any questions or Interested in working together?, please feel free to drop me a line with some info about your project and i will get back to you as soon as i can. Please allow a couple days for me to respond. Thank You!</p>
+              <div class="social-links">
+                <a href="https://twitter.com/SreelakshmiCP4?s=08" class="twitter"><i class="icofont-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100009721997471" class="facebook"><i class="icofont-facebook"></i></a>
+                <a href="https://www.instagram.com/scpushpan/" class="instagram"><i class="icofont-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/sreelakshmi-c-p-67553213a" class="linkedin"><i class="icofont-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-7 col-sm-6 col-lg-3">
+            <div class="contactinfo">
+              <div>
+                <i class="icofont-google-map"></i>
+                <p>Chittaeth,Sahakarana Road, Vyttila<br>Kerala, Kochi 602019</p>
+              </div>
+
+              <div>
+                <i class="icofont-envelope"></i>
+                <p>spushpa5@my.centennialcollege.ca</p>
+              </div>
+
+              <div>
+                <i class="icofont-phone"></i>
+                <p>+91 8592029384</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-8 col-sm-6 email-container" >
+            <form action="" method="POST" class="email-form" id="emailfrm">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="first-name" placeholder="First Name" data-rule="required" data-msg="Please enter your first name"/>
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="last-name" placeholder="Last Name" data-rule="required" data-msg="Please enter your last name"/>
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="contact-no" placeholder="Contact Number" pattern="[7-9]{1}[0-9]{9}" data-msg="Please enter your contact number"/>
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="text-center">
+                <a href="/" class="btn btn-primary bbtn" id="bAdd">Contact</a>  
+                <!-- <input type="button" class="btn btn-primary" value="Submit Button" onclick="redirecthome()" id="submit-btn"> -->
+              </div>
+            </form>
+
+            
+          </div>
+          
+
+        </div>
+
+      </div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">        
+            <a class="page-link" href="/buisiness-contact" tabindex="-1" aria-disabled="true">Previous</a>
+            <%-include partials/pagination.ejs%>
+          </li>
+        </ul>
+      </nav>
+    </section><!-- End Contact Section -->
+    
+    <%-include partials/footer_nav.ejs%>
+    <%-include partials/footer.ejs%>
+  
+    
