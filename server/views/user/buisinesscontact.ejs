@@ -3,17 +3,32 @@
 
 <section class="businessContact">
     <div class="limiter">
-        <h1><%= title %></h1>
+		
+		<% if(typeof displayName == 'string' && displayName) { %>
+			<h1><strong>
+				Hello,  <%= displayName %></h1>
+			</strong>
+		<% } else { %>
+			<h1><strong><%= title %></strong></h1>
+			<% } %>
+		
+        
 		<div class="container-table100">
+			
             
 			<div class="wrap-table100">
+				
 				<div class="table100 ver1 m-b-110">
+					
 					<div class="table100-head">
 						
 						
 						<table>
+							
+
 							<thead id="btblhead">
 								<% if(typeof displayName == 'string' && displayName) { %>
+									
 									<tr class="row100 head">
 										<th class="cell100 column1">Name</th>
 										<th class="cell100 column2">Contact</th>
@@ -23,6 +38,7 @@
 										
 									</tr>
 									<% } else { %>
+										
 										<tr class="row100 head">
 											<th class="cell100 column1">Name</th>
 											<th class="cell100 column2">Contact</th>
